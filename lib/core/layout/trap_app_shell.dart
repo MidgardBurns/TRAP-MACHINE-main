@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../features/feed/presentation/feed_page.dart';
 import '../../features/inbox/presentation/inbox_page.dart';
+import '../../features/mapa/presentation/mapa_page.dart';
 import '../../features/perfil/presentation/profile_page.dart';
 import '../routes/app_route.dart';
 import 'trap_bottom_menu.dart';
@@ -47,8 +49,8 @@ class _TrapAppShellState extends ConsumerState<TrapAppShell> {
         child: IndexedStack(
           index: AppRoute.values.indexOf(selectedRoute),
           children: const [
-            _RoutePlaceholder(title: 'Feed'),
-            _RoutePlaceholder(title: 'Mapa'),
+            FeedPage(),
+            MapaPage(),
             _RoutePlaceholder(title: 'Criar'),
             InboxPage(),
             ProfilePage(),
