@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../features/inbox/presentation/inbox_page.dart';
 import '../../features/perfil/presentation/profile_page.dart';
 import '../routes/app_route.dart';
 import 'trap_bottom_menu.dart';
@@ -49,7 +50,7 @@ class _TrapAppShellState extends ConsumerState<TrapAppShell> {
             _RoutePlaceholder(title: 'Feed'),
             _RoutePlaceholder(title: 'Mapa'),
             _RoutePlaceholder(title: 'Criar'),
-            _RoutePlaceholder(title: 'Inbox'),
+            InboxPage(),
             ProfilePage(),
           ],
         ),
